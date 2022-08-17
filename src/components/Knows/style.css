@@ -1,0 +1,64 @@
+.KnowsContainer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  background-color: var(--tealish);
+  color: var(--black);
+  padding: 8em 8em;
+}
+.KnowsContainer h2 {
+  font-size: 3em;
+  margin: 0 auto;
+  color: aliceblue;
+}
+
+.KnowsContainer label {
+  font-size: 2em;
+  margin: 1em auto 1em auto;
+  color: aliceblue;
+  padding-bottom: 5px;
+  border-bottom: aliceblue 1px solid;
+}
+.KnowsContainer .knowsGrid {
+  display: grid;
+  margin: 1em auto -0.3em auto;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1em;
+  font-size: 4em;
+  color: aliceblue;
+}
+.KnowsContainer .knowsGrid .knowsItem {
+  margin-top: -50px;
+  transform: scale(0.9);
+  cursor: pointer;
+  transition: all ease 0.2s;
+}
+.KnowsContainer .knowsGrid .knowsItem img {
+  width: 0.9em;
+  fill: aliceblue;
+}
+.KnowsContainer .knowsGrid .knowsItem:hover {
+  transform: scale(1.2);
+}
+
+@media screen and (max-width: 1280px) {
+  .KnowsContainer {
+    padding-bottom: 200px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .KnowsContainer {
+    padding: 8em 2em;
+  }
+
+  .KnowsContainer h2 {
+    font-size: 2em;
+    margin: 0 auto;
+    color: aliceblue;
+  }
+}

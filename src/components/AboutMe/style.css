@@ -1,0 +1,98 @@
+.AboutMeContainer {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  min-height: 780px;
+  background-color: var(--squash);
+  color: var(--black);
+  padding: 8em 8em;
+}
+
+.AboutMeContainer h2 {
+  z-index: 2;
+  font-size: 4em;
+  margin-bottom: 10px;
+}
+
+.AboutMeContainer p {
+  z-index: 2;
+  font-size: 1.4em;
+  margin-top: 10px;
+  text-align: justify;
+}
+.AboutMeContainer p strong {
+  font-weight: bolder;
+}
+
+.AboutMeContainer .buttonArea {
+  display: flex;
+  margin: 35px auto;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--mustard);
+  border-radius: 10px;
+  width: 15%;
+  height: 50px;
+  transition: all ease 0.5s;
+  transform: scale(0.9);
+  font-weight: bold;
+  color: var(--black);
+  cursor: pointer;
+}
+.AboutMeContainer .buttonArea:hover {
+  transform: scale(1.1);
+}
+.AboutMeContainer .buttonArea a {
+  color: var(--black);
+  text-decoration: none;
+}
+
+@media screen and (max-width: 1280px) {
+  .AboutMeContainer {
+    align-items: center;
+  }
+
+  .AboutMeContainer p {
+    z-index: 2;
+    font-size: 1.4em;
+    margin-top: 25px;
+    text-align: justify;
+  }
+
+  .AboutMeContainer .buttonArea {
+    display: flex;
+    margin: 35px auto;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--mustard);
+    border-radius: 10px;
+    width: 50%;
+    height: 80px;
+    transition: all ease 0.5s;
+    transform: scale(0.9);
+    font-weight: bold;
+    color: var(--black);
+    cursor: pointer;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .AboutMeContainer {
+    padding: 8em 2em;
+  }
+
+  .AboutMeContainer h2 {
+    z-index: 2;
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  .AboutMeContainer p {
+    z-index: 2;
+    font-size: 1em;
+    margin-top: 10px;
+    text-align: justify;
+  }
+}

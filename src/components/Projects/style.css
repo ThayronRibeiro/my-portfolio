@@ -1,0 +1,83 @@
+.ProjectsContainer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  background-color: var(--mustard);
+  color: var(--black);
+  padding: 8em 8em;
+}
+
+.ProjectsContainer .titleAndInfos {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: 0 auto;
+  justify-content: center;
+  height: fit-content;
+}
+.ProjectsContainer .titleAndInfos h2 {
+  font-size: 3em;
+  margin-bottom: 15px;
+}
+.ProjectsContainer .titleAndInfos p {
+  font-weight: 500;
+  font-size: 1.2em;
+  margin-bottom: 15px;
+}
+
+.ProjectsContainer .gridProjects {
+  width: 100%;
+  margin: 10px auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.ProjectsContainer span {
+  color: aliceblue;
+  margin-left: 5px;
+}
+.ProjectsContainer a {
+  color: aliceblue;
+}
+
+.downArrow2 {
+  display: flex;
+  margin: 4rem auto 1rem auto;
+  justify-content: center;
+}
+
+.downArrow2 a {
+  color: var(--black);
+  font-size: 3rem;
+  cursor: pointer;
+  animation: myAnim 3s ease 0s infinite normal forwards;
+}
+
+@media screen and (max-width: 1280px) {
+  .ProjectsContainer .gridProjects {
+    width: 100%;
+    margin: 10px auto;
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .ProjectsContainer {
+    padding: 8em 2em;
+  }
+  .ProjectsContainer .titleAndInfos h2 {
+    font-size: 2em;
+    margin-bottom: 15px;
+  }
+
+  .ProjectsContainer .gridProjects {
+    width: 100%;
+    margin: 10px auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0px;
+  }
+}

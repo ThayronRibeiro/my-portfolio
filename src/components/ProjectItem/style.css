@@ -1,0 +1,127 @@
+a {
+  text-decoration: none;
+  color: var(--black);
+}
+.cardProject {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: baseline;
+  align-items: center;
+  width: 350px;
+  height: 350px;
+  background-color: var(--tealish);
+  border-radius: 10px;
+  transform: scale(0.9);
+  transition: all ease 0.2s;
+}
+
+.cardProject:hover {
+  transform: scale(1);
+  -webkit-box-shadow: 5px 5px 21px -8px rgba(23, 23, 23, 0.63);
+  box-shadow: 5px 5px 21px -8px rgba(23, 23, 23, 0.63);
+}
+
+.cardProject .title {
+  width: inherit;
+  height: 55px;
+  border-radius: 10px 10px 0 0;
+  background-color: aliceblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.2em;
+  padding: 10px 10px;
+}
+
+.cardProject .thumbCard {
+  width: 100%;
+  border-bottom: aliceblue 5px solid;
+}
+
+.cardProject .description {
+  text-align: center;
+  font-size: 1.2em;
+  color: aliceblue;
+}
+
+.cardProject .techs {
+  width: inherit;
+  background-color: aliceblue;
+  text-align: center;
+  font-weight: bold;
+}
+
+.cardProject .buttonsArea {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  width: inherit;
+  position: absolute;
+  bottom: 0;
+  height: 45px;
+  border-radius: 0 0 10px 10px;
+  background-color: aliceblue;
+}
+
+.gitButton {
+  display: flex;
+  color: aliceblue;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 10px;
+  background-color: var(--black);
+  height: 30px;
+}
+.gitButton:hover {
+  opacity: 0.8;
+}
+.liveButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 10px;
+  background-color: var(--black);
+  height: 30px;
+}
+.liveButton:hover {
+  opacity: 0.8;
+}
+
+@media screen and (max-width: 1280px) {
+  .cardProject {
+    position: relative;
+    display: flex;
+    margin: 0 auto;
+    flex-direction: column;
+    justify-content: baseline;
+    align-items: center;
+    width: 350px;
+    height: 350px;
+    background-color: var(--tealish);
+    border-radius: 10px;
+    transform: scale(0.9);
+    transition: all ease 0.2s;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .cardProject {
+    position: relative;
+    display: flex;
+    margin: 0 auto;
+    margin-left: -15px;
+    flex-direction: column;
+    justify-content: baseline;
+    align-items: center;
+    width: 350px;
+    height: 350px;
+    background-color: var(--tealish);
+    border-radius: 10px;
+    transform: scale(0.8);
+    transition: all ease 0.2s;
+  }
+}

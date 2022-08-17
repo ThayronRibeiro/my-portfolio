@@ -1,6 +1,8 @@
 .Container {
+  margin-top: 10em;
   padding: 0 10rem;
   display: flex;
+  width: 100%;
 }
 .Container .infos {
   flex: 1;
@@ -10,6 +12,21 @@
   color: #fff;
   padding-bottom: 2%;
   border-bottom: var(--gray) 1px solid;
+}
+.Container .infos h1:after {
+  content: "|";
+  margin-left: 5px;
+  opacity: 1;
+  animation: pisca 0.7s infinite;
+}
+@keyframes pisca {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
 }
 .Container .infos p {
   color: #fff;
@@ -22,10 +39,15 @@
   margin-top: 5%;
   gap: 1.5rem;
 }
+.Container .buttonGroup .gitButton a {
+  text-decoration: none;
+  color: var(--black);
+}
 .Container .buttonGroup .gitButton {
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 5px;
   height: inherit;
   width: 10rem;
   border-radius: 10px;
@@ -40,11 +62,15 @@
 .Container .buttonGroup .gitButton:hover {
   transform: scale(1.2);
 }
-
+.Container .buttonGroup .linkedinButton a {
+  text-decoration: none;
+  color: #fff;
+}
 .Container .buttonGroup .linkedinButton {
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 5px;
   height: inherit;
   width: 10rem;
   border-radius: 10px;
@@ -65,6 +91,8 @@
   border-left: var(--squash) 15px solid;
   width: 300px;
   transform: scale(0.9);
+  -moz-transform: rotate(4deg);
+  -webkit-transform: rotate(4deg);
   transition: all ease 0.5s;
 }
 
@@ -76,4 +104,106 @@
   width: inherit;
   border-top: #fff 15px solid;
   border-left: #fff 15px solid;
+}
+
+.downArrow {
+  display: flex;
+  margin: 8rem auto 3rem auto;
+  justify-content: center;
+}
+
+.downArrow a {
+  color: #fff;
+  font-size: 3rem;
+  cursor: pointer;
+  animation: myAnim 3s ease 0s infinite normal forwards;
+}
+@keyframes myAnim {
+  0% {
+    animation-timing-function: ease-out;
+    transform: scale(1);
+    transform-origin: center center;
+  }
+
+  10% {
+    animation-timing-function: ease-in;
+    transform: scale(0.91);
+  }
+
+  17% {
+    animation-timing-function: ease-out;
+    transform: scale(0.98);
+  }
+
+  33% {
+    animation-timing-function: ease-in;
+    transform: scale(0.87);
+  }
+
+  45% {
+    animation-timing-function: ease-out;
+    transform: scale(1);
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .Container {
+    margin-top: 10em;
+    padding: 0 10rem;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .Container .infos {
+    flex: 0;
+  }
+
+  .Container .buttonGroup {
+    display: flex;
+    width: 100%;
+    height: 3.5rem;
+    margin-top: 5%;
+    margin-bottom: 20%;
+    gap: 1.5rem;
+  }
+
+  .Container .photo {
+    margin: 0 auto;
+    border-top: var(--squash) 15px solid;
+    border-left: var(--squash) 15px solid;
+    width: 400px;
+    transform: scale(0.9);
+    -moz-transform: rotate(4deg);
+    -webkit-transform: rotate(4deg);
+    transition: all ease 0.5s;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .Container {
+    margin-top: 10em;
+    padding: 0 3rem;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .Container .infos h1 {
+    font-size: 3em;
+    color: #fff;
+    padding-bottom: 2%;
+    border-bottom: var(--gray) 1px solid;
+  }
+
+  .Container .photo {
+    margin: 0 auto;
+    width: 200px;
+  }
+
+  .downArrow {
+    display: flex;
+    margin: 4rem auto 3rem auto;
+    justify-content: center;
+  }
 }
